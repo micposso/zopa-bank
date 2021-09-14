@@ -9,27 +9,118 @@ ui.navigation = `
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
       <li class="nav-item active">
-        <a class="nav-link" href="#">Create Accoiunt</a>
+        <a class="nav-link" href="#" onclick="loadCreateAccount()">Create Account</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">Deposit</a>
+        <a class="nav-link" href="#" onclick="loadDeposit()">Deposit</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">Withdraw</a>
+        <a class="nav-link" href="#" onclick="loadWithdraw()">Withdraw</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">Balance</a>
+        <a class="nav-link" href="#" onclick="loadBalance()">Balance</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">All Data</a>
+        <a class="nav-link" href="#" onclick="loadAllData()">All Data</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">Login</a>
+        <a class="nav-link" href="#" onclick="loadLogin()">Login</a>
       </li>
     </ul>
   </div>
 </nav>
 `;
 
-let navigation = document.getElementById('navigation');
+let navigation = document.getElementById("navigation");
 navigation.innerHTML += ui.navigation;
+
+ui.default = `
+<div class="card text-white bg-primary mb-3" style="max-width: 18rem;">
+  <div class="card-header">Welcome to Zopa Bank</div>
+  <div class="card-body">
+    <h5 class="card-title">Zopa is here to help you</h5>
+    <p class="card-text">Please use the navigation bar to explore your account</p>
+    <i class="far fa-piggy-bank"></i>
+  </div>
+</div>
+`;
+
+ui.createAccount = `
+<div class="card text-white bg-primary mb-3" style="max-width: 18rem;">
+  <div class="card-header">Create Account</div>
+  <div class="card-body">
+    <h5 class="card-title">Primary card title</h5>
+    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+  </div>
+</div>
+`;
+
+ui.balance = `
+<div class="card text-white bg-primary mb-3" style="max-width: 18rem;">
+  <div class="card-header">Your Balance</div>
+  <div class="card-body">
+    <h5 class="card-title">Primary card title</h5>
+    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+  </div>
+</div>
+`;
+
+ui.deposit = `
+<div class="card text-white bg-primary mb-3" style="max-width: 18rem;">
+  <div class="card-header">Make a Deposit</div>
+  <div class="card-body">
+    <h5 class="card-title">Primary card title</h5>
+    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+  </div>
+</div>
+`;
+
+ui.withdraw = `
+<div class="card text-white bg-primary mb-3" style="max-width: 18rem;">
+  <div class="card-header">Withdraw Money</div>
+  <div class="card-body">
+    <h5 class="card-title">Primary card title</h5>
+    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+  </div>
+</div>
+`;
+
+ui.alldata = `
+<div class="card">
+  <p>All data</p>
+</div>
+`;
+
+ui.login = `
+<button type="button" class="btn btn-primary">Create Account</button>
+`;
+
+let loadDefault = function () {
+  target.innerHTML = ui.default;
+};
+
+let loadCreateAccount = function () {
+  target.innerHTML = ui.createAccount;
+};
+
+let loadBalance = function () {
+  target.innerHTML = ui.balance;
+};
+
+let loadDeposit = function () {
+  target.innerHTML = ui.deposit;
+};
+
+let loadWithdraw = function () {
+  target.innerHTML = ui.withdraw;
+};
+
+let loadAllData = function () {
+  target.innerHTML = ui.alldata;
+};
+
+let loadLogin = function () {
+  target.innerHTML = ui.login;
+};
+
+loadCreateAccount();
